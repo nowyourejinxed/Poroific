@@ -1,0 +1,55 @@
+.text {
+    -unity-font: url('project://database/Assets/Fonts/Daydream.ttf?fileID=12800000&guid=2a6e2e4853ec97e439767736d90ae735&type=3#Daydream');
+    -unity-font-style: bold;
+    font-size: 18px;
+    -unity-text-align: middle-center;
+    -unity-font-definition: initial;
+    color: rgb(255, 255, 255);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    -unity-text-outline-width: 0;
+    -unity-text-outline-color: rgb(255, 255, 255);
+}
+
+.title {
+    -unity-font: url('project://database/Assets/Fonts/Daydream.ttf?fileID=12800000&guid=2a6e2e4853ec97e439767736d90ae735&type=3#Daydream');
+    -unity-font-style: bold;
+    font-size: 60px;
+    -unity-text-align: middle-center;
+    -unity-font-definition: initial;
+    color: rgb(255, 255, 255);
+    margin-top: 35px;
+    margin-right: 35px;
+    margin-bottom: 35px;
+    margin-left: 35px;
+    -unity-text-outline-width: 0;
+    -unity-text-outline-color: rgb(255, 255, 255);
+}
+
+.button {
+    -unity-font-style: normal;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 425px;
+    height: 85px;
+    background-image: url('project://database/Assets/UI/Large%20Button.png?fileID=21300000&guid=2ad17bb0da01f344e98d03501ce22005&type=3#Large Button');
+    -unity-font: url('project://database/Assets/Fonts/Daydream.ttf?fileID=12800000&guid=2a6e2e4853ec97e439767736d90ae735&type=3#Daydream');
+    -unity-font-definition: initial;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    white-space: normal;
+    word-spacing: 15px;
+    -unity-text-align: middle-center;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0);
+    align-self: center;
+    margin-top: 7.5px;
+    margin-right: 7.5px;
+    margin-bottom: 7.5px;
+    margin-left: 7.5px;
+    cursor: url('project://database/Assets/UI/Cursor.png?fileID=2800000&guid=a164b4dad807b9347854388d231dbc3e&type=3#Cursor');
+}
