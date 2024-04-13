@@ -7,7 +7,7 @@ public class Stats : MonoBehaviour
     [Header("Base Stats")]
     public float currentHealth;
     public float targetHealth;
-    public float damage;
+    public int damage;
 
     public void TakeDamage(GameObject target, float damageAmount)
     {

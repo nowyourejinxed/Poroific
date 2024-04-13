@@ -38,4 +38,14 @@ public class HealthUI : MonoBehaviour
             }
         }
     }
+
+    public void TakeDamage(int damageAmount)
+    {
+        health -= damageAmount;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+            //trigger loss and end game
+        }
+    }
 }
