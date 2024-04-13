@@ -44,7 +44,12 @@ public class HealthUI : MonoBehaviour
         health -= damageAmount;
         if (health <= 0)
         {
+            for (int i = 0; i < hearts.Length; i++)
+            {
+                hearts[i].sprite = emptyHeart;
+            }
             Destroy(gameObject);
+            
             //trigger loss and end game
         }
     }
