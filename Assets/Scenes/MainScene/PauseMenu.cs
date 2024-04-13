@@ -34,7 +34,11 @@ public class PauseMenu : MonoBehaviour
     private void onResumeClick(ClickEvent clickEvent)
     {
         Debug.Log("Resuming game...");
-        _audioManager.PlaySound("Button Click");
+        
+        if (_audioManager != null)
+        {
+            _audioManager.PlaySound("Button Click");
+        }
 
         _resumeGameCallback.Invoke();
         this.gameObject.SetActive(false);
@@ -43,12 +47,20 @@ public class PauseMenu : MonoBehaviour
     private void onRestartClick(ClickEvent clickEvent)
     {
         Debug.Log("Restarting game...");
-        _audioManager.PlaySound("Button Click");
+
+        if (_audioManager != null)
+        {
+            _audioManager.PlaySound("Button Click");
+        }
     }
 
     private void onQuitClick(ClickEvent clickEvent)
     {
-        _audioManager.PlaySound("Button Click");
+        if (_audioManager != null)
+        {
+            _audioManager.PlaySound("Button Click");
+        }
+
         SceneManager.LoadScene("MainMenu");
     }
 

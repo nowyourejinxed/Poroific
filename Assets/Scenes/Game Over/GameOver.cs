@@ -26,13 +26,21 @@ public class GameOver : MonoBehaviour
 
     private void onReplayClick(ClickEvent clickEvent)
     {
-        _audioManager.PlaySound("Button Click");
+        if (_audioManager != null)
+        {    
+            _audioManager.PlaySound("Button Click");
+        }
+
         Debug.Log("IMPLEMENT THIS... IDK HOW ¯\\_(ツ)_/¯");
     }
 
     private void onMenuClick(ClickEvent clickEvent)
     {
-        _audioManager.PlaySound("Button Click");
+        if (_audioManager != null)
+        {    
+            _audioManager.PlaySound("Button Click");
+        }
+        
         SceneManager.LoadScene("MainMenu");
     }
 
