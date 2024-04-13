@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class PauseMenu : MonoBehaviour
 {
-
+    private AudioManager _audioManager;
     private Button _resumeButton;
     private Button _restartButton;
     private Button _quitButton;
@@ -16,6 +16,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Awake()
     {
+        _audioManager = FindObjectOfType<AudioManager>();
         _uiDocument = GetComponent<UIDocument>();
     }
 
@@ -33,6 +34,7 @@ public class PauseMenu : MonoBehaviour
     private void onResumeClick(ClickEvent clickEvent)
     {
         Debug.Log("Resuming game...");
+        _audioManager.PlaySound("Button Click");
 
         _resumeGameCallback.Invoke();
         this.gameObject.SetActive(false);
@@ -41,10 +43,12 @@ public class PauseMenu : MonoBehaviour
     private void onRestartClick(ClickEvent clickEvent)
     {
         Debug.Log("Restarting game...");
+        _audioManager.PlaySound("Button Click");
     }
 
     private void onQuitClick(ClickEvent clickEvent)
     {
+        _audioManager.PlaySound("Button Click");
         SceneManager.LoadScene("MainMenu");
     }
 

@@ -3,6 +3,7 @@ using UnityEngine.UIElements;
 
 public class Instructions : MonoBehaviour
 {
+    private AudioManager _audioManager;
     private Button _closeButton;
 
     [SerializeField]
@@ -11,8 +12,8 @@ public class Instructions : MonoBehaviour
 
     private void Awake()
     {
+        _audioManager = FindObjectOfType<AudioManager>();
         _uiDocument = GetComponent<UIDocument>();
-
     }
 
     private void OnEnable()
@@ -23,6 +24,8 @@ public class Instructions : MonoBehaviour
 
     private void onCloseClick(ClickEvent clickEvent)
     {
+        _audioManager.PlaySound("Button Click");
+        
         _mainMenu.SetActive(true);
         this.gameObject.SetActive(false);
     }

@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 public class MainMenu : MonoBehaviour
 {
-
+    private AudioManager _audioManager;
     private Button _startButton;
     private Button _instructionsButton;
     private Button _exitButton;
@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
 
     private void Awake()
     {
+        _audioManager = FindObjectOfType<AudioManager>();
         _uiDocument = GetComponent<UIDocument>();
     }
 
@@ -31,11 +32,14 @@ public class MainMenu : MonoBehaviour
 
     private void onStartClick(ClickEvent clickEvent)
     {
+        _audioManager.PlaySound("Button Click");
         SceneManager.LoadScene("MainScene");
     }
 
     private void onInstructionsClick(ClickEvent clickEvent)
     {
+        _audioManager.PlaySound("Button Click");
+
         _instructionsUI.SetActive(true);
         this.gameObject.SetActive(false);
     }
@@ -43,6 +47,8 @@ public class MainMenu : MonoBehaviour
     private void onExitClick(ClickEvent clickEvent)
     {
         Debug.Log("Exiting game...");
+
+        _audioManager.PlaySound("Button Click");
         Application.Quit();
     }
 

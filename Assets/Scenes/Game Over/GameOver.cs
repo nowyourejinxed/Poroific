@@ -4,13 +4,14 @@ using UnityEngine.UIElements;
 
 public class GameOver : MonoBehaviour
 {
-
+    private AudioManager _audioManager;
     private Button _replayButton;
     private Button _menuButton;
     private UIDocument _uiDocument;
 
     private void Awake()
     {
+        _audioManager = FindObjectOfType<AudioManager>();
         _uiDocument = GetComponent<UIDocument>();
     }
 
@@ -25,11 +26,13 @@ public class GameOver : MonoBehaviour
 
     private void onReplayClick(ClickEvent clickEvent)
     {
+        _audioManager.PlaySound("Button Click");
         Debug.Log("IMPLEMENT THIS... IDK HOW ¯\\_(ツ)_/¯");
     }
 
     private void onMenuClick(ClickEvent clickEvent)
     {
+        _audioManager.PlaySound("Button Click");
         SceneManager.LoadScene("MainMenu");
     }
 
