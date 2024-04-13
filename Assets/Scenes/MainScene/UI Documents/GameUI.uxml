@@ -1,3 +1,3 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="Container" style="flex-grow: 1;" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; cursor: url(&apos;project://database/Assets/UI/Cursor.png?fileID=2800000&amp;guid=a164b4dad807b9347854388d231dbc3e&amp;type=3#Cursor&apos;);" />
 </ui:UXML>

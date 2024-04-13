@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class MainMenu : MonoBehaviour
@@ -30,13 +31,11 @@ public class MainMenu : MonoBehaviour
 
     private void onStartClick(ClickEvent clickEvent)
     {
-        Debug.Log("Redirecting to play screen...");
+        SceneManager.LoadScene("MainScene");
     }
 
     private void onInstructionsClick(ClickEvent clickEvent)
     {
-        Debug.Log("Redirecting to how to play screen...");
-
         _instructionsUI.SetActive(true);
         this.gameObject.SetActive(false);
     }
@@ -44,6 +43,7 @@ public class MainMenu : MonoBehaviour
     private void onExitClick(ClickEvent clickEvent)
     {
         Debug.Log("Exiting game...");
+        Application.Quit();
     }
 
     private void OnDisable()
