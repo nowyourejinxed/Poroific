@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -8,12 +9,12 @@ public class EnemyAI : MonoBehaviour
     public string playerTag; 
     public float stopDistance = 2.0f;
     public float aggroRange = 5.0f; //will need to tune and set collision/explosion/dmg
-    private EnemyMovement enemyController;
+    private NavMeshAgent enemyController;
     
 
     void Start()
     {
-        enemyController = GetComponent<EnemyMovement>();
+        enemyController = GetComponent<NavMeshAgent>();
         FindAndSetTarget();
     }
 
@@ -23,14 +24,7 @@ public class EnemyAI : MonoBehaviour
             Vector3 directionToTarget = currentTarget.position - transform.position;
             Vector3 stoppingPosition = currentTarget.position - directionToTarget.normalized * stopDistance;
             
-            enemyController.target = stoppingPosition;
-            //set destination to stoppingPosition
-            Rigidbody unitRB = gameObject.GetComponent<Rigidbody>();
-            unitRB.velocity = stoppingPosition * 1f;
-            if(unitRB.transform.position == stoppingPosition)
-            {
-                unitRB.velocity = new Vector3(0, 0);
-            }
+            enemyController.SetDestination(stoppingPosition);
         
     }
     private void FindAndSetTarget()

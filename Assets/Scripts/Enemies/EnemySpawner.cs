@@ -32,5 +32,7 @@ public class EnemySpawner : MonoBehaviour
     {
         Transform spawnPoint = spawnPoints;
         GameObject enemy = Instantiate(regEnemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        UnityEngine.AI.NavMeshAgent enemyMeshAgent = enemy.GetComponent<UnityEngine.AI.NavMeshAgent>();
+        enemyMeshAgent.speed = enemyMoveSpeed;
     }
 }
