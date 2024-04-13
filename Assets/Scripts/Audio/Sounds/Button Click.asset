@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Button Click
   m_EditorClassIdentifier: 
   soundName: Button Click
-  audioClip: {fileID: 8300000, guid: f78e9b47579fc774480e9dc9b09dbd21, type: 3}
+  audioClip: {fileID: 8300000, guid: d753f2367d4328d4486bd0068fda6518, type: 3}
   volume: 1
   loop: 0
   audioSource: {fileID: 0}
