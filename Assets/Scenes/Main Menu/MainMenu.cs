@@ -3,16 +3,22 @@ using UnityEngine.UIElements;
 
 public class MainMenu : MonoBehaviour
 {
-    private UIDocument _uiDocument;
 
     private Button _startButton;
     private Button _instructionsButton;
     private Button _exitButton;
 
+    [SerializeField]
+    private GameObject _instructionsUI;
+    private UIDocument _uiDocument;
+
     private void Awake()
     {
         _uiDocument = GetComponent<UIDocument>();
+    }
 
+    private void OnEnable()
+    {
         _startButton = _uiDocument.rootVisualElement.Q("Start") as Button;
         _instructionsButton = _uiDocument.rootVisualElement.Q("Instructions") as Button;
         _exitButton = _uiDocument.rootVisualElement.Q("Exit") as Button;
@@ -30,6 +36,9 @@ public class MainMenu : MonoBehaviour
     private void onInstructionsClick(ClickEvent clickEvent)
     {
         Debug.Log("Redirecting to how to play screen...");
+
+        _instructionsUI.SetActive(true);
+        this.gameObject.SetActive(false);
     }
 
     private void onExitClick(ClickEvent clickEvent)
