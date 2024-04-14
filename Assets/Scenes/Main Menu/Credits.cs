@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Instructions : MonoBehaviour
+public class Credits : MonoBehaviour
 {
     private AudioManager _audioManager;
     private Button _closeButton;
 
     [SerializeField]
     private GameObject _mainMenu;
-
+    
     [SerializeField]
     private UIDocument _UIDocument;
 
