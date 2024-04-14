@@ -10,13 +10,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float _movementSpeed = 0f;
     
+    [SerializeField]
     private PauseListener _pauseListener;
+
     private CharacterController _characterController;
     private Camera _mainCamera;
 
     private void Awake()
     {
-        _pauseListener = GameObject.Find("Game UI").GetComponent<PauseListener>();
         _characterController = GetComponent<CharacterController>();
         _mainCamera = Camera.main;
     }

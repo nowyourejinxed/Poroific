@@ -7,7 +7,7 @@ public class PauseListener : MonoBehaviour
     private GameObject _pauseMenu;
 
     [SerializeField]
-    private UIDocument _UIDocument;
+    private GameObject _gameUI;
 
     public bool _isPaused { get; private set; }
 
@@ -28,7 +28,7 @@ public class PauseListener : MonoBehaviour
                 _isPaused = true;
                 _pauseMenu.SetActive(true);
 
-                _UIDocument.enabled = false;
+                _gameUI.SetActive(false);
             }
         }
     }
@@ -40,6 +40,6 @@ public class PauseListener : MonoBehaviour
         _isPaused = false;
         _pauseMenu.SetActive(false);
 
-        _UIDocument.enabled = true;
+        _gameUI.SetActive(true);
     }
 }
