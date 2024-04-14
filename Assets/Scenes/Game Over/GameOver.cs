@@ -13,6 +13,11 @@ public class GameOver : MonoBehaviour
     {
         _audioManager = FindObjectOfType<AudioManager>();
         _uiDocument = GetComponent<UIDocument>();
+
+        if (_audioManager != null)
+        {
+            _audioManager.PlaySound("Womp Womp");
+        }
     }
 
     private void OnEnable()
