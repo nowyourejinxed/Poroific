@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5fb06baa26ad94fbc797599ca356e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killCount: 0
 --- !u!1 &8699172846969944022
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5fb06baa26ad94fbc797599ca356e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killCount: 0
 --- !u!1001 &2316584344348840689
 PrefabInstance:
   m_ObjectHideFlags: 0

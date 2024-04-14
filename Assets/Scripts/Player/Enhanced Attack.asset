@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Enhanced Attack
   m_EditorClassIdentifier: 
   name: Enhanced Attack
-  cooldownTime: 5.5
-  durationTime: 1
+  cooldownTime: 10
+  durationTime: 8

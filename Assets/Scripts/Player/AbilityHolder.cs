@@ -26,6 +26,8 @@ public class AbilityHolder : MonoBehaviour
     [SerializeField]
     private PauseListener _pauseListener;
 
+    [SerializeField] private ParticleSystem attackEffect;
+
     private Label _countdownTimer;
 
     private float _cooldownTime;
@@ -49,6 +51,7 @@ public class AbilityHolder : MonoBehaviour
                         Debug.Log("Ability activated!");
 
                         ability.Activate(gameObject);
+                        attackEffect.Play();
                         _abilityState = AbilityState.Active;
                         _durationTime = ability.durationTime;
                     }
