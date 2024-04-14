@@ -1,3 +1,13 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="Container" style="flex-grow: 1; cursor: url(&apos;project://database/Assets/UI/Cursor.png?fileID=2800000&amp;guid=a164b4dad807b9347854388d231dbc3e&amp;type=3#Cursor&apos;);" />
+    <Style src="project://database/Assets/Scenes/MainScene/UI%20Documents/GameUI.uss?fileID=7433441132597879392&amp;guid=9d12f84db6e82574cb45c89119e96f11&amp;type=3#GameUI" />
+    <ui:VisualElement name="Container" style="cursor: url(&apos;project://database/Assets/UI/Cursor.png?fileID=2800000&amp;guid=a164b4dad807b9347854388d231dbc3e&amp;type=3#Cursor&apos;); width: 100%; height: 100%; flex-direction: row; justify-content: flex-end; align-self: flex-end; margin-top: 15px; margin-right: 15px; margin-bottom: 15px; margin-left: 15px;">
+        <ui:GroupBox style="align-items: center; align-self: auto; cursor: url(&apos;project://database/Assets/UI/Cursor.png?fileID=2800000&amp;guid=a164b4dad807b9347854388d231dbc3e&amp;type=3#Cursor&apos;); justify-content: flex-end;">
+            <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BasicAttackTimer" class="text" style="cursor: url(&apos;project://database/Assets/UI/Cursor.png?fileID=2800000&amp;guid=a164b4dad807b9347854388d231dbc3e&amp;type=3#Cursor&apos;);" />
+            <ui:VisualElement name="Icon" class="abilityIcon" style="cursor: url(&apos;project://database/Assets/UI/Cursor.png?fileID=2800000&amp;guid=a164b4dad807b9347854388d231dbc3e&amp;type=3#Cursor&apos;);" />
+        </ui:GroupBox>
+        <ui:GroupBox style="align-items: center; align-self: auto; cursor: url(&apos;project://database/Assets/UI/Cursor.png?fileID=2800000&amp;guid=a164b4dad807b9347854388d231dbc3e&amp;type=3#Cursor&apos;); justify-content: flex-end;">
+            <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="EnhancedAttackTimer" class="text" style="cursor: url(&apos;project://database/Assets/UI/Cursor.png?fileID=2800000&amp;guid=a164b4dad807b9347854388d231dbc3e&amp;type=3#Cursor&apos;);" />
+            <ui:VisualElement name="Icon" class="abilityIcon" style="cursor: url(&apos;project://database/Assets/UI/Cursor.png?fileID=2800000&amp;guid=a164b4dad807b9347854388d231dbc3e&amp;type=3#Cursor&apos;); background-image: url(&apos;project://database/Assets/UI/Enhanced%20Attack.png?fileID=2800000&amp;guid=2d2b9cb1aba6ea14ebd135c431fdb9b7&amp;type=3#Enhanced Attack&apos;);" />
+        </ui:GroupBox>
+    </ui:VisualElement>
 </ui:UXML>

@@ -3,9 +3,9 @@ using UnityEngine.UIElements;
 
 public class PauseListener : MonoBehaviour
 {
-    private bool _isPaused;
     [SerializeField]
     private GameObject _pauseMenu;
+    private bool _isPaused;
 
     // Attempt to pause the game.
     // If the game is already paused, then unpause it.
