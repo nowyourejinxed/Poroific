@@ -3604,7 +3604,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4242616488282952434, guid: 05fb38fc13dd94856845e03fb3d47d2e, type: 3}
       propertyPath: enemiesPerWave
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4242616488282952434, guid: 05fb38fc13dd94856845e03fb3d47d2e, type: 3}
       propertyPath: delayBetweenEnemies
@@ -3620,7 +3620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8367054023654519121, guid: 05fb38fc13dd94856845e03fb3d47d2e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.78
+      value: 19.54
       objectReference: {fileID: 0}
     - target: {fileID: 8367054023654519121, guid: 05fb38fc13dd94856845e03fb3d47d2e, type: 3}
       propertyPath: m_LocalRotation.w
