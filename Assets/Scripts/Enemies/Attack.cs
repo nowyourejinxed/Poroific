@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    private AudioManager _audioManager;
+
+    private void Awake()
+    {
+        _audioManager = FindObjectOfType<AudioManager>();
+    }
+
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Enemy")
         {
-            Debug.Log("I RAN SOMEONE OVER");
+            if (_audioManager != null)
+            {
+                _audioManager.PlaySound("Enemy Death");
+            }
+            
             Destroy(collider.gameObject);
         }
     }
