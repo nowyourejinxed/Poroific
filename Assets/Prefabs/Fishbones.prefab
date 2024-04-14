@@ -150,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8b2bf8db1f1f06c45a2c120e8cfdaf6d, type: 3}
       propertyPath: m_Name
-      value: Fishbones 1
+      value: Fishbones
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8b2bf8db1f1f06c45a2c120e8cfdaf6d, type: 3}
       propertyPath: m_IsActive
@@ -219,6 +219,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b2bf8db1f1f06c45a2c120e8cfdaf6d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7558088371706060083}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8b2bf8db1f1f06c45a2c120e8cfdaf6d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4654466561283906576}
   m_SourcePrefab: {fileID: 100100000, guid: 8b2bf8db1f1f06c45a2c120e8cfdaf6d, type: 3}
 --- !u!1 &2523440635844669922 stripped
 GameObject:
@@ -260,7 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   playerTag: Player
-  stopDistance: 1
+  stopDistance: 2
   aggroRange: 0
 --- !u!114 &7066965268103214821
 MonoBehaviour:
@@ -326,3 +329,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4654466561283906576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2523440635844669922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3aa37a11532046458020c5e94f0f466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCooldown: 1
