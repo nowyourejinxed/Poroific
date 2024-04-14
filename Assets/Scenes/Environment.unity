@@ -2379,7 +2379,7 @@ MonoBehaviour:
   _resumeGameCallback:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1797000736}
+      - m_Target: {fileID: 1116222385}
         m_TargetAssemblyTypeName: PauseListener, Assembly-CSharp
         m_MethodName: resumeGame
         m_Mode: 1
@@ -2938,6 +2938,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 60851135e70dcae48ba1cc4f9143abde, type: 3}
   m_PrefabInstance: {fileID: 1821048746}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1116222384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1116222386}
+  - component: {fileID: 1116222385}
+  m_Layer: 0
+  m_Name: PauseListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1116222385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116222384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119a22665abb75047852a50f08ffdc88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pauseMenu: {fileID: 954444581}
+  _gameUI: {fileID: 1797000735}
+--- !u!4 &1116222386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116222384}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 36.904408, y: 0.11560565, z: 1.9192936}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1119203636 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5520483775449146553, guid: 91a469442fcea434d95051e6f7c86e9e, type: 3}
@@ -4462,7 +4508,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1797000738}
   - component: {fileID: 1797000737}
-  - component: {fileID: 1797000736}
   m_Layer: 5
   m_Name: Game UI
   m_TagString: Untagged
@@ -4470,19 +4515,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1797000736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797000735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 119a22665abb75047852a50f08ffdc88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pauseMenu: {fileID: 954444581}
 --- !u!114 &1797000737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5409,6 +5441,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3034310645884725076, guid: 0aaeb2d6e12663343b516a3c700539b6, type: 3}
+      propertyPath: _pauseListener
+      value: 
+      objectReference: {fileID: 1116222385}
+    - target: {fileID: 3944271222383789686, guid: 0aaeb2d6e12663343b516a3c700539b6, type: 3}
+      propertyPath: _UIDocument
+      value: 
+      objectReference: {fileID: 1797000737}
+    - target: {fileID: 3944271222383789686, guid: 0aaeb2d6e12663343b516a3c700539b6, type: 3}
+      propertyPath: _pauseListener
+      value: 
+      objectReference: {fileID: 1116222385}
+    - target: {fileID: 4172223129313749307, guid: 0aaeb2d6e12663343b516a3c700539b6, type: 3}
+      propertyPath: _UIDocument
+      value: 
+      objectReference: {fileID: 1797000737}
+    - target: {fileID: 4172223129313749307, guid: 0aaeb2d6e12663343b516a3c700539b6, type: 3}
+      propertyPath: _pauseListener
+      value: 
+      objectReference: {fileID: 1116222385}
     - target: {fileID: 5637776270209751665, guid: 0aaeb2d6e12663343b516a3c700539b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6301,6 +6353,7 @@ SceneRoots:
   - {fileID: 924667946}
   - {fileID: 984679949}
   - {fileID: 1185597626750396842}
+  - {fileID: 1116222386}
   - {fileID: 1797000738}
   - {fileID: 463303886}
   - {fileID: 954444584}

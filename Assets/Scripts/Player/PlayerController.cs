@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float _movementSpeed = 0f;
     
+    [SerializeField]
+    private PauseListener _pauseListener;
+
     private CharacterController _characterController;
     private Camera _mainCamera;
 
@@ -21,8 +24,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Aim();
-        MoveCharacter();
+        if (!_pauseListener._isPaused)
+        {
+            Aim();
+            MoveCharacter();
+        }
     }
 
     private void Aim()

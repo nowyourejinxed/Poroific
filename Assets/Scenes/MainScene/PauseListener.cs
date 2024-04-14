@@ -5,11 +5,15 @@ public class PauseListener : MonoBehaviour
 {
     [SerializeField]
     private GameObject _pauseMenu;
-    private bool _isPaused;
+
+    [SerializeField]
+    private GameObject _gameUI;
+
+    public bool _isPaused { get; private set; }
 
     // Attempt to pause the game.
     // If the game is already paused, then unpause it.
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -24,7 +28,7 @@ public class PauseListener : MonoBehaviour
                 _isPaused = true;
                 _pauseMenu.SetActive(true);
 
-                this.gameObject.SetActive(false);
+                _gameUI.SetActive(false);
             }
         }
     }
@@ -36,6 +40,6 @@ public class PauseListener : MonoBehaviour
         _isPaused = false;
         _pauseMenu.SetActive(false);
 
-        this.gameObject.SetActive(true);
+        _gameUI.SetActive(true);
     }
 }
