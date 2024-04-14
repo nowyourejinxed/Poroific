@@ -7,26 +7,34 @@ public class MainMenu : MonoBehaviour
     private AudioManager _audioManager;
     private Button _startButton;
     private Button _instructionsButton;
+    private Button _creditsButton;
     private Button _exitButton;
 
     [SerializeField]
-    private GameObject _instructionsUI;
-    private UIDocument _uiDocument;
+    private UIDocument _UIDocument;
+    
+    [SerializeField]
+    private GameObject _instructions;
+    
+    [SerializeField]
+    private GameObject _credits;
+    
 
     private void Awake()
     {
         _audioManager = FindObjectOfType<AudioManager>();
-        _uiDocument = GetComponent<UIDocument>();
     }
 
     private void OnEnable()
     {
-        _startButton = _uiDocument.rootVisualElement.Q("Start") as Button;
-        _instructionsButton = _uiDocument.rootVisualElement.Q("Instructions") as Button;
-        _exitButton = _uiDocument.rootVisualElement.Q("Exit") as Button;
+        _startButton = _UIDocument.rootVisualElement.Q("Start") as Button;
+        _instructionsButton = _UIDocument.rootVisualElement.Q("Instructions") as Button;
+        _creditsButton = _UIDocument.rootVisualElement.Q("Credits") as Button;
+        _exitButton = _UIDocument.rootVisualElement.Q("Exit") as Button;
 
         _startButton.RegisterCallback<ClickEvent>(onStartClick);
         _instructionsButton.RegisterCallback<ClickEvent>(onInstructionsClick);
+        _creditsButton.RegisterCallback<ClickEvent>(onCreditsClick);
         _exitButton.RegisterCallback<ClickEvent>(onExitClick);
     }
 
@@ -40,7 +48,15 @@ public class MainMenu : MonoBehaviour
     {
         _audioManager.PlaySound("Button Click");
 
-        _instructionsUI.SetActive(true);
+        _instructions.SetActive(true);
+        this.gameObject.SetActive(false);
+    }
+
+    private void onCreditsClick(ClickEvent clickEvent)
+    {
+        _audioManager.PlaySound("Button Click");
+
+        _credits.SetActive(true);
         this.gameObject.SetActive(false);
     }
 
