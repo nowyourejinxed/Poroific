@@ -31,6 +31,11 @@ public class EnemySpawner : MonoBehaviour
             enemiesPerWave = 12;
             spawnInterval -= 5.0f;
         }
+
+        if (spawnInterval <= 0)
+        {
+            spawnInterval = 20.0f;
+        }
     }
 
     private IEnumerator SpawnEnemies()

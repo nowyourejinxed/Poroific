@@ -29,7 +29,7 @@ public class GameOver : MonoBehaviour
         _replayButton = _uiDocument.rootVisualElement.Q("Replay") as Button;
         _menuButton = _uiDocument.rootVisualElement.Q("Menu") as Button;
         _score = _uiDocument.rootVisualElement.Q(_UIElement) as Label;
-        _score.text = $"{PlayerPrefs.GetInt("CurrentScore", 0)}";
+        //_score.text = $"{PlayerPrefs.GetInt("CurrentScore", 0)}";
 
         _replayButton.RegisterCallback<ClickEvent>(onReplayClick);
         _menuButton.RegisterCallback<ClickEvent>(onMenuClick);
