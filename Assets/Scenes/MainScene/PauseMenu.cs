@@ -52,6 +52,7 @@ public class PauseMenu : MonoBehaviour
         {
             _audioManager.PlaySound("Button Click");
         }
+        SceneManager.LoadScene("Environment");
     }
 
     private void onQuitClick(ClickEvent clickEvent)
