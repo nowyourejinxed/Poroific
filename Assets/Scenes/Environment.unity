@@ -1570,6 +1570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ability: {fileID: 11400000, guid: e9aa7c50c05895f43aa0778babde2673, type: 2}
   keyCode: 323
+  _UIElement: BasicAttackTimer
 --- !u!114 &748992518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1584,6 +1585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ability: {fileID: 11400000, guid: d164a8cbc1a0b3c4096a8c922e0e3cef, type: 2}
   keyCode: 324
+  _UIElement: EnhancedAttackTimer
 --- !u!4 &760295179 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 60851135e70dcae48ba1cc4f9143abde, type: 3}
