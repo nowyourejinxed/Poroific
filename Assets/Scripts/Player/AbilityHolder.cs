@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 // Referenced from https://www.youtube.com/watch?v=ry4I6QyPw4E
 enum AbilityState
@@ -17,49 +16,68 @@ public class AbilityHolder : MonoBehaviour
     
     [SerializeField]
     private KeyCode keyCode;
+
+    [SerializeField]
+    private string _UIElement;
+
+    private UIDocument _uiDocument;
+    private Label _countdownTimer;
+
+    private float _cooldownTime;
+    private float _durationTime;
+    private AbilityState _abilityState = AbilityState.Ready;
     
-    private float cooldownTime;
-    private float durationTime;
-    private AbilityState abilityState = AbilityState.Ready;
-    
+    private void Awake()
+    {
+        _uiDocument = GameObject.Find("Game UI").GetComponent<UIDocument>();
+    }
+
+    private void OnEnable()
+    {
+        _countdownTimer = _uiDocument.rootVisualElement.Q(_UIElement) as Label;
+    }
+
     private void Update()
     {
-        Debug.Log("I'm updating the ability...");
-
-        switch (abilityState)
+        switch (_abilityState)
         {
             case AbilityState.Ready:
                 if (Input.GetKeyDown(keyCode))
                 {
                     ability.Activate(gameObject);
-                    abilityState = AbilityState.Active;
-                    durationTime = ability.durationTime;
+                    _abilityState = AbilityState.Active;
+                    _durationTime = ability.durationTime;
                 }
                 
                 break;
 
             case AbilityState.Active:
-                if (durationTime > 0)
+                if (_durationTime > 0)
                 {
-                    durationTime -= Time.deltaTime;
+                    _durationTime -= Time.deltaTime;
                 }
                 else
                 {
                     ability.Deactivate(gameObject);
-                    abilityState = AbilityState.Cooldown;
-                    cooldownTime = ability.cooldownTime;
+                    _abilityState = AbilityState.Cooldown;
+                    _cooldownTime = ability.cooldownTime;
                 }
 
                 break;
 
             case AbilityState.Cooldown:
-                if (cooldownTime > 0)
+                if (_cooldownTime > 0)
                 {
-                    cooldownTime -= Time.deltaTime;
+                    _cooldownTime -= Time.deltaTime;
+
+                    int seconds = Mathf.FloorToInt(_cooldownTime % 60);
+                    int tenths = Mathf.FloorToInt((_cooldownTime * 10) % 10);
+                    _countdownTimer.text = string.Format("{0}.{1}s", seconds, tenths);
                 }
                 else
                 {
-                    abilityState = AbilityState.Ready;
+                    _countdownTimer.text = "";
+                    _abilityState = AbilityState.Ready;
                 }
 
                 break;

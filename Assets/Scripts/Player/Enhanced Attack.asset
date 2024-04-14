@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62215d8881aca44181e4da38790ba65, type: 3}
   m_Name: Enhanced Attack
   m_EditorClassIdentifier: 
-  name: 
-  cooldownTime: 0
-  durationTime: 0
+  name: Enhanced Attack
+  cooldownTime: 5.5
+  durationTime: 1
