@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     {
         UpdateHighScore();
         currentScore.text = $"Current Score: {killCount}";
+        PlayerPrefs.SetInt("CurrentScore", 0);
     }
 
     public void IncreaseScore()
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
         killCount++;
         //increment ui
         currentScore.text = $"Current Score: {killCount}";
+        PlayerPrefs.SetInt("CurrentScore", killCount);
         CheckHighScore();
     }
 

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UIElements;
 
 public class GameOver : MonoBehaviour
@@ -8,6 +9,9 @@ public class GameOver : MonoBehaviour
     private Button _replayButton;
     private Button _menuButton;
     private UIDocument _uiDocument;
+    private Label _score;
+    [SerializeField]
+    private string _UIElement;
 
     private void Awake()
     {
@@ -24,6 +28,8 @@ public class GameOver : MonoBehaviour
     {
         _replayButton = _uiDocument.rootVisualElement.Q("Replay") as Button;
         _menuButton = _uiDocument.rootVisualElement.Q("Menu") as Button;
+        _score = _uiDocument.rootVisualElement.Q(_UIElement) as Label;
+        _score.text = $"{PlayerPrefs.GetInt("CurrentScore", 0)}";
 
         _replayButton.RegisterCallback<ClickEvent>(onReplayClick);
         _menuButton.RegisterCallback<ClickEvent>(onMenuClick);
@@ -35,7 +41,7 @@ public class GameOver : MonoBehaviour
         {    
             _audioManager.PlaySound("Button Click");
         }
-
+        SceneManager.LoadScene("Environment");
         Debug.Log("IMPLEMENT THIS... IDK HOW ¯\\_(ツ)_/¯");
     }
 
