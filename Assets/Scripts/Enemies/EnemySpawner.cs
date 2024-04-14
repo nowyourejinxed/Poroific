@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,11 +11,33 @@ public class EnemySpawner : MonoBehaviour
     public GameObject regEnemyPrefab;
     public Transform spawnPoints;
     public int enemiesPerWave = 3;
+    private float elapsedTime = 0;
 
     void Start()
     {
         StartCoroutine(SpawnEnemies());
     }
+
+    private void Update()
+    {
+        elapsedTime += Time.deltaTime;
+        if (elapsedTime > 30.0f)
+        {
+            enemiesPerWave = 6;
+            spawnInterval -= 5.0f;
+        }
+        else if (elapsedTime > 60.0f)
+        {
+            enemiesPerWave = 12;
+            spawnInterval -= 5.0f;
+        }
+
+        if (spawnInterval <= 0)
+        {
+            spawnInterval = 20.0f;
+        }
+    }
+
     private IEnumerator SpawnEnemies()
     {
         while(true)

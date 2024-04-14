@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthUI : MonoBehaviour
 {
@@ -49,7 +50,7 @@ public class HealthUI : MonoBehaviour
                 hearts[i].sprite = emptyHeart;
             }
             Destroy(gameObject);
-            
+            SceneManager.LoadScene("GameOver");
             //trigger loss and end game
         }
     }

@@ -66,6 +66,7 @@ public class AbilityHolder : MonoBehaviour
                     else
                     {
                         ability.Deactivate(gameObject);
+                        attackEffect.Stop();
                         _abilityState = AbilityState.Cooldown;
                         _cooldownTime = ability.cooldownTime;
                     }
