@@ -33,7 +33,7 @@ public class MainMenu : MonoBehaviour
     private void onStartClick(ClickEvent clickEvent)
     {
         _audioManager.PlaySound("Button Click");
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("Environment");
     }
 
     private void onInstructionsClick(ClickEvent clickEvent)

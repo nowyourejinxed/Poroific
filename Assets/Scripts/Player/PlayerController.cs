@@ -10,19 +10,24 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float _movementSpeed = 0f;
     
+    private PauseListener _pauseListener;
     private CharacterController _characterController;
     private Camera _mainCamera;
 
     private void Awake()
     {
+        _pauseListener = GameObject.Find("Game UI").GetComponent<PauseListener>();
         _characterController = GetComponent<CharacterController>();
         _mainCamera = Camera.main;
     }
 
     private void Update()
     {
-        Aim();
-        MoveCharacter();
+        if (!_pauseListener._isPaused)
+        {
+            Aim();
+            MoveCharacter();
+        }
     }
 
     private void Aim()

@@ -4483,6 +4483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauseMenu: {fileID: 954444581}
+  _UIDocument: {fileID: 1797000737}
 --- !u!114 &1797000737
 MonoBehaviour:
   m_ObjectHideFlags: 0
