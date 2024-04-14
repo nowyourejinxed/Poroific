@@ -47,6 +47,6 @@ MonoBehaviour:
   enemyMoveSpeed: 5
   spawnInterval: 20
   delayBetweenEnemies: 3
-  regEnemyPrefab: {fileID: 7407381565613875407, guid: 5e31e9f44fad6413c9c6105f5fb90cd2, type: 3}
+  regEnemyPrefab: {fileID: 2523440635844669922, guid: eb6749e4866a0794f9895cfe59857903, type: 3}
   spawnPoints: {fileID: 8367054023654519121}
   enemiesPerWave: 3
